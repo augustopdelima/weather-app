@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather App</title>
+    </head>
+    <body>
+        <main>
+            <div class="weather-card">
+                <h1 id="city" class="city-name"></h1>
+                <p id="temperature"></p>
+                <p id="humidity"></p>
+                <p id="rain"></p>
+            </div>
+
+            <div class="search-weather">
+                <label class="city-label">
+                    Type a city name
+                    <input
+                        placeholder="Type a city to search"
+                        type="text"
+                        id="search-city"
+                        minlength="1"
+                    />
+                </label>
+                <ul id="cities"></ul>
+            </div>
+        </main>
+        <footer>
+            <p>
+                All the data showed in this page came from
+                <a href="https://open-meteo.com/">Open-meteo</a>
+            </p>
+        </footer>
+        <script type="module" src="src/main.js"></script>
+    </body>
+</html>
