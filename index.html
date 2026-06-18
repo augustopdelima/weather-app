@@ -4,33 +4,59 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Weather App</title>
+        <link rel="stylesheet" href="src/style.css" />
     </head>
     <body>
         <main>
-            <div class="weather-card">
-                <h1 id="city" class="city-name"></h1>
-                <p id="temperature"></p>
-                <p id="humidity"></p>
-                <p id="rain"></p>
+            <div class="weather-card" data-state="empty">
+                <div class="weather-card__header">
+                    <span class="weather-card__icon">&#9925;</span>
+                    <h1 id="city" class="city-name">Select a city</h1>
+                    <div id="unit-toggle" class="unit-toggle">
+                        <button type="button" value="C" class="active">&deg;C</button>
+                        <button type="button" value="F">&deg;F</button>
+                    </div>
+                </div>
+
+                <div class="weather-card__temp">
+                    <span id="temperature" class="temperature">—</span>
+                </div>
+
+                <div class="weather-card__details">
+                    <div class="detail-item">
+                        <span class="detail-icon">&#9730;</span>
+                        <span id="humidity">—</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">&#127783;</span>
+                        <span id="rain">—</span>
+                    </div>
+                </div>
             </div>
 
             <div class="search-weather">
-                <label class="city-label">
-                    Type a city name
-                    <input
-                        placeholder="Type a city to search"
-                        type="text"
-                        id="search-city"
-                        minlength="1"
-                    />
+                <label class="search-label">
+                    <span class="search-label__text">City</span>
+                    <div class="search-input-wrapper">
+                        <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                        <input
+                            placeholder="Search for a city..."
+                            type="text"
+                            id="search-city"
+                            minlength="1"
+                        />
+                    </div>
                 </label>
                 <ul id="cities"></ul>
             </div>
         </main>
         <footer>
             <p>
-                All the data showed in this page came from
-                <a href="https://open-meteo.com/">Open-meteo</a>
+                Powered by
+                <a href="https://open-meteo.com/">Open-Meteo</a>
             </p>
         </footer>
         <script type="module" src="src/main.js"></script>

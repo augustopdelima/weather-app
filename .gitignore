@@ -1,0 +1,29 @@
+```gitignore id="dockignore1"
+# Docker
+Dockerfile.pi
+compose.yml
+docker-compose.yml
+.devcontainer/
+
+# Pi
+.pi/
+.agents/
+
+# Environment
+.env
+.env.*
+
+# Dependencies
+node_modules/
+
+# Build
+dist/
+build/
+
+# Cache
+.cache/
+tmp/
+
+# Zed
+.zed/
+```
